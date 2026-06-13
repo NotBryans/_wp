@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宋明輝的期中網頁專題 - 經典方塊遊戲展示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>經典方塊遊戲主控台</h1>
+            <p class="meta">學號：111411230 | 姓名：宋明輝 | 國立金門大學資工系</p>
+        </header>
+
+        <div class="main-layout">
+            <div class="canvas-area">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <div class="game-over-overlay" id="gameOver">
+                    <h2>遊戲結束</h2>
+                    <button onclick="startGame()">重新開始</button>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="panel score-panel">
+                    <h3>遊戲數據</h3>
+                    <div class="stat"><span class="label">分數:</span> <span id="score">0</span></div>
+                    <div class="stat"><span class="label">等級:</span> <span id="level">1</span></div>
+                </div>
+
+                <div class="panel controls">
+                    <h3>操作說明</h3>
+                    <p>⬅️ ➡️ : 左右移動</p>
+                    <p>⬇️ : 加速下落</p>
+                    <button class="btn-start" onclick="startGame()">開始遊戲</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
