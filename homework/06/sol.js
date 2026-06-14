@@ -1,33 +1,44 @@
-// === 1. 基礎函數定義與呼叫 (Function Definition) ===
-function greet(name) {
-  return `Hello, ${name}!`;
-}
-console.log("Q1:", greet("明輝"));
+// 作業六：JavaScript 函數與陣列邏輯處理
+// 111411230 宋明輝 企一乙
 
-// === 2. 數值計算函數 (Sum Function) ===
-function add(a, b) {
-  return a + b;
+// 1. 向量加法
+function vadd(a, b) {
+    let result = [];
+    for (let i = 0; i < a.length; i++) {
+        result.push(a[i] + b[i]);
+    }
+    return result;
 }
-console.log("Q2:", add(15, 27));
+console.log("向量加法 [1,2] + [3,4] =", vadd([1,2], [3,4]));
 
-// === 3. 陣列總和計算 (Array Sum Loop) ===
-function sumArray(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
-  }
-  return total;
+// 2. 矩陣加法
+function madd(a, b) {
+    let result = [];
+    for (let i = 0; i < a.length; i++) {
+        let row = [];
+        for (let j = 0; j < a[i].length; j++) {
+            row.push(a[i][j] + b[i][j]);
+        }
+        result.push(row);
+    }
+    return result;
 }
-console.log("Q3:", sumArray([1, 2, 3, 4, 5]));
+console.log("矩陣加法 =", madd([[1,2],[3,4]], [[5,6],[7,8]]));
 
-// === 4. 華氏轉攝氏溫度 (Temperature Conversion) ===
-function fahrenheitToCelsius(f) {
-  return (f - 32) * 5 / 9;
+// 3. 矩陣相乘
+function mmul(a, b) {
+    let result = [];
+    for (let i = 0; i < a.length; i++) {
+        let row = [];
+        for (let j = 0; j < b[0].length; j++) {
+            let sum = 0;
+            for (let k = 0; k < a[0].length; k++) {
+                sum += a[i][k] * b[k][j];
+            }
+            row.push(sum);
+        }
+        result.push(row);
+    }
+    return result;
 }
-console.log("Q4 (98.6°F to °C):", fahrenheitToCelsius(98.6));
-
-// === 5. 簡易陣列最大值篩選 (Find Max) ===
-function findMax(arr) {
-  return Math.max(...arr);
-}
-console.log("Q5:", findMax([10, 5, 8, 23, 14]));
+console.log("矩陣相乘 =", mmul([[1,2]], [[3],[4]]));
