@@ -1,72 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bryan — Personal Website</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #f0f0f0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      border-radius: 2rem;
-      padding: 3rem 2.5rem;
-      max-width: 680px;
-      width: 100%;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .avatar {
-      width: 120px; height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem; font-weight: 700;
-      margin: 0 auto 1.5rem;
-      box-shadow: 0 8px 32px rgba(0,210,255,0.3);
-    }
-    h1 { text-align: center; font-size: 2rem; margin-bottom: 0.25rem; }
-    .title { text-align: center; color: #a0c4ff; margin-bottom: 1.5rem; font-size: 0.95rem; letter-spacing: 1px; }
-    .divider { height: 1px; background: rgba(255,255,255,0.1); margin: 1.5rem 0; }
-    .bio { line-height: 1.8; font-size: 1rem; color: #d0d0e0; }
-    .bio p { margin-bottom: 1rem; }
-    .socials { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
-    .socials a {
-      color: #f0f0f0; text-decoration: none;
-      padding: 0.5rem 1.2rem; border-radius: 2rem;
-      border: 1px solid rgba(255,255,255,0.15);
-      font-size: 0.9rem; transition: 0.2s;
-    }
-    .socials a:hover { background: rgba(255,255,255,0.1); border-color: #00d2ff; }
-    footer { text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #8888aa; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宋明輝的個人網頁</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
+        .profile-card { background: #1e293b; max-width: 600px; width: 100%; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid #334155; }
+        h1 { color: #38bdf8; margin-top: 0; }
+        h2 { color: #06b6d4; font-size: 18px; border-bottom: 2px solid #334155; padding-bottom: 8px; }
+        p { line-height: 1.6; color: #cbd5e1; }
+        .info-list { list-style: none; padding: 0; }
+        .info-list li { margin: 10px 0; font-size: 16px; }
+        .info-list strong { color: #38bdf8; }
+        .tag { display: inline-block; background: #0ea5e9; color: white; padding: 4px 10px; border-radius: 6px; font-size: 13px; margin-right: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <div class="avatar">B</div>
-    <h1>Bryan</h1>
-    <p class="title">Web Developer &amp; Problem Solver</p>
-    <div class="divider"></div>
-    <div class="bio">
-      <p>Hi there! I'm Bryan, a passionate web developer who lovkes turning ideas into clean, functional code. I enjoy building modern web applications and exploring new technologies.</p>
-      <p>When I'm not coding, you'll find me divisng into design systems, contributing to open-source projects, or learning about AI and machine learning.</p>
+    <div class="profile-card">
+        <h1>自我介紹 / About Me</h1>
+        <ul class="info-list">
+            <li><strong>學校：</strong>國立金門大學</li>
+            <li><strong>系級：</strong>企業管理學系 一年級乙班 (企一乙)</li>
+            <li><strong>學號：</strong>111411230</li>
+            <li><strong>姓名：</strong>宋明輝</li>
+        </ul>
+        
+        <h2>💻 學習目標與專長</h2>
+        <p>目前正在學習網頁前端開發基礎技術，包含網頁語意化結構設計、CSS3 排版佈局與美化。期許在本學期掌握跨領域網頁架構，並能獨立規劃與開發個人響應式網頁應用。</p>
+        
+        <h2>🛠️ 技術盤點</h2>
+        <div>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git & GitHub</span>
+        </div>
     </div>
-    <div class="socials">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Email</a>
-    </div>
-    <footer>&copy; 2026 Bryan. Crafted with &lt;3</footer>
-  </div>
 </body>
 </html>
