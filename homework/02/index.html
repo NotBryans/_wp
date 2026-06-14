@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Forms Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+            <h2>Account Login</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember-me" name="remember">
+                    <label for="remember-me">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn">Sign In</button>
+                <p class="form-footer"><a href="#">Forgot password?</a></p>
+            </form>
+        </div>
+
+        <div class="form-card">
+            <h2>Create an Account</h2>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-fname">First Name</label>
+                        <input type="text" id="reg-fname" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-lname">Last Name</label>
+                        <input type="text" id="reg-lname" name="lastname" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-birthdate">Date of Birth</label>
+                    <input type="date" id="reg-birthdate" name="birthdate">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions</label>
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Register</button>
+            </form>
+        </div>
+
+        <div class="form-card">
+            <h2>Website Feedback Survey</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="survey-source">How did you find us?</label>
+                    <select id="survey-source" name="source">
+                        <option value="" disabled selected>Choose an option</option>
+                        <option value="google">Google Search</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Recommendation from a friend</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Would you recommend our website to others?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="recommend-yes" name="recommend" value="yes">
+                        <label for="recommend-yes">Definitely</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="recommend-maybe" name="recommend" value="maybe">
+                        <label for="recommend-maybe">Maybe</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="recommend-no" name="recommend" value="no">
+                        <label for="recommend-no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="survey-comments">Do you have any suggestions for improvement?</label>
+                    <textarea id="survey-comments" name="comments" rows="4" placeholder="Write your feedback here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
